@@ -47,6 +47,8 @@ func main() {
 
 	opts := mqtt.NewClientOptions()
 	opts.AddBroker(os.Getenv("MQTT_BROKER_URL"))
+	opts.Username = os.Getenv("MQTT_USERNAME")
+	opts.Password = os.Getenv("MQTT_PASSWORD")
 	opts.SetKeepAlive(2 * time.Second)
 	opts.SetDefaultPublishHandler(messagePubHandler)
 	opts.SetPingTimeout(1 * time.Second)

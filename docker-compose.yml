@@ -5,7 +5,7 @@ services:
     image: eclipse-mosquitto
     network_mode: host
     volumes:
-      - ./mqtt-data/conf:/mosquitto/conf
+      - ./mqtt-data/config:/mosquitto/config
       - ./mqtt-data/data:/mosquitto/data
       - ./mqtt-data/log:/mosquitto/log
     ports:
